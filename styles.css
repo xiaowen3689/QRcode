@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500&display=swap');
+
+body {
+  width: 300px;
+  margin: 0;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #ffffff;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.qr-wrapper {
+  position: relative;
+  background: white;
+  padding: 12px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.qr-wrapper:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+#qrcode {
+  width: 200px;
+  height: 200px;
+}
+
+.favicon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 4px;
+}
+
+.site-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 添加加载动画 */
+.loading .qr-wrapper {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+} 
